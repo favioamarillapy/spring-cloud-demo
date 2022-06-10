@@ -1,4 +1,4 @@
-package com.py.bus;
+package com.py.tasador;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

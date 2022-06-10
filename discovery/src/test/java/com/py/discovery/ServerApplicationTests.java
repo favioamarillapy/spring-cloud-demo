@@ -1,10 +1,10 @@
-package com.py.products;
+package com.py.discovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceProductsApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {

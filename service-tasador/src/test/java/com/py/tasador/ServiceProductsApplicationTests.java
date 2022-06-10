@@ -1,4 +1,4 @@
-package com.py.products;
+package com.py.tasador;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
