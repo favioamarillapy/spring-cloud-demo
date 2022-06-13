@@ -48,3 +48,4 @@ services:
       - discovery-service
 networks:
   springcloudnetwork:
+    name: springcloudnetwork
