@@ -1,9 +1,9 @@
-version: '3.7'
+version: '3.9'
 services:
   config-server:
     image: image-config-server:v1
     ports:
-      - "8888:8888"
+      - "8088:8088"
     restart: always
     networks:
       - spring-cloud-network
