@@ -6,14 +6,14 @@ services:
       - "8088:8088"
     restart: always
     networks:
-      - spring-cloud-network
+      - springcloudnetwork
   discovery-service:
     image: image-discovery-service:v1
     ports:
       - "8061:8061"
     restart: always
     networks:
-      - spring-cloud-network
+      - springcloudnetwork
     depends_on:
       - config-server
   gateway-service:
@@ -22,8 +22,9 @@ services:
       - "8060:8060"
     restart: always
     networks:
-      - spring-cloud-network
+      - springcloudnetwork
     depends_on:
+      - config-server
       - discovery-service
   service-bus:
     image: image-service-bus:v1
@@ -31,8 +32,9 @@ services:
       - "8001:8001"
     restart: always
     networks:
-      - spring-cloud-network
+      - springcloudnetwork
     depends_on:
+      - config-server
       - discovery-service
   service-tasador:
     image: image-service-tasador:v1
@@ -40,8 +42,10 @@ services:
       - "8002:8002"
     restart: always
     networks:
-      - spring-cloud-network
+      - springcloudnetwork
     depends_on:
+      - config-server
       - discovery-service
 networks:
-  spring-cloud-network:
+  springcloudnetwork:
+    name: springcloudnetwork
