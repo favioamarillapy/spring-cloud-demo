@@ -2,6 +2,7 @@ version: '3.9'
 services:
   config-server:
     image: image-config-server:v1
+    container_name: config-server
     ports:
       - "8088:8088"
     restart: always
@@ -9,6 +10,7 @@ services:
       - springcloudnetwork
   discovery-service:
     image: image-discovery-service:v1
+    container_name: discovery-service
     ports:
       - "8061:8061"
     restart: always
@@ -18,6 +20,7 @@ services:
       - config-server
   gateway-service:
     image: image-gateway-service:v1
+    container_name: gateway-service
     ports:
       - "8060:8060"
     restart: always
@@ -28,6 +31,7 @@ services:
       - discovery-service
   service-bus:
     image: image-service-bus:v1
+    container_name: service-bus
     ports:
       - "8001:8001"
     restart: always
@@ -38,6 +42,7 @@ services:
       - discovery-service
   service-tasador:
     image: image-service-tasador:v1
+    container_name: service-tasador
     ports:
       - "8002:8002"
     restart: always
